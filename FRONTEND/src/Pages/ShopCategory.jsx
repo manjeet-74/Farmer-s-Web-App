@@ -9,7 +9,17 @@ export default function ShopCategory(props) {
 
   return (
     <div className="Shop-category">
-      <img className="Shopcategory-banner" src={props.banner} alt="" />
+      <div className="banner">
+        <div className="left-banner"></div>
+        <div className="right-banner">
+          <img
+            className="Shopcategory-banner"
+            src={props.banner}
+            alt=""
+            style={{ height: "250px", width: "250px" }}
+          />
+        </div>
+      </div>
 
       <div className="Shopcategory-indexSort">
         <p>
@@ -37,9 +47,7 @@ export default function ShopCategory(props) {
           }
         })}
       </div>
-      <div className="Shopcategory-loadmore">
-        Explore More
-      </div>
+      <div className="Shopcategory-loadmore">Explore More</div>
     </div>
   );
 }

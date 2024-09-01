@@ -48,6 +48,28 @@
   padding-top: 50px;
 }
 
+.Offers {
+  padding: 0 80px;
+  margin-bottom: 120px;
+}
+.Offers-left h1 {
+  font-size: 40px;
+}
+.Offers-left p {
+  font-size: 18px;
+}
+.Offers-right img {
+  width: 300px;
+}
+.Offers-left button {
+  width: 220px;
+  height: 50px;
+  font-size: 18px;
+}
+.Offers-right {
+  padding-top: 30px;
+}
+
 @media (max-width: 1280px) {
   .Offers {
     padding: 0 80px;

@@ -10,9 +10,9 @@ import Product from "./Pages/Product.jsx";
 import Shop from "./Pages/Shop.jsx";
 import ShopCategory from "./Pages/ShopCategory.jsx";
 
-import kid_banner from "./Components/Assets/banner_kids.png";
-import men_banner from "./Components/Assets/banner_mens.png";
-import women_banner from "./Components/Assets/banner_women.png";
+import fruits_banner from "./Components/Assets/banner_fruits.jpg";
+import grains_banner from "./Components/Assets/banner_grains.jpg";
+import vegetables_banner from "./Components/Assets/banner_vegetables.jpg";
 
 function App() {
   return (
@@ -22,16 +22,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route
-            path="/men"
-            element={<ShopCategory banner={men_banner} category="men" />}
+            path="/fruits"
+            element={<ShopCategory banner={fruits_banner} category="fruits" />}
           />
           <Route
-            path="/women"
-            element={<ShopCategory banner={women_banner} category="women" />}
+            path="/vegetables"
+            element={
+              <ShopCategory banner={vegetables_banner} category="vegetables" />
+            }
           />
           <Route
-            path="/kids"
-            element={<ShopCategory banner={kid_banner} category="kid" />}
+            path="/grains"
+            element={<ShopCategory banner={grains_banner} category="grains" />}
           />
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />

@@ -28,11 +28,11 @@ export default function CartItems() {
               <div className="CartItems-format CartItems-format-main">
                 <img src={e.image} alt="" className="CartIcon-product-icon" />
                 <p>{e.name}</p>
-                <p>${e.new_price}</p>
+                <p> &#8377;{e.new_price}</p>
                 <button className="CartItems-quantity">
                   {cartItems[e.id]}
                 </button>
-                <p>${e.new_price * cartItems[e.id]}</p>
+                <p> &#8377;{e.new_price * cartItems[e.id]}</p>
                 <img
                   className="CartItems-remove-icon"
                   src={remove_icon}
@@ -56,7 +56,7 @@ export default function CartItems() {
           <div>
             <div className="CartItems-total-item">
               <p>Subtotal</p>
-              <p>${getTotalCartAmount()}</p>
+              <p> &#8377;{getTotalCartAmount()}</p>
             </div>
 
             <hr />
@@ -70,7 +70,7 @@ export default function CartItems() {
 
             <div className="CartItems-total-item">
               <h3>Total</h3>
-              <h3>${getTotalCartAmount()}</h3>
+              <h3> &#8377;{getTotalCartAmount()}</h3>
             </div>
           </div>
 

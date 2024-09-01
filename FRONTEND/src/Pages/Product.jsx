@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import Breadcrum from "../Components/Breadcrums/Breadcrum.jsx";
 import DescriptionBox from "../Components/DescriptionBox/DescriptionBox.jsx";
 import ProductDisplay from "../Components/ProductDisplay/ProductDisplay.jsx";
-import RelatedProducts from "../Components/RelatedProducts/RelatedProducts.jsx";
 import { ShopContext } from "../Context/ShopContext";
 
 export default function Product() {
@@ -17,7 +16,6 @@ export default function Product() {
       <Breadcrum product={product} />
       <ProductDisplay product={product} />
       <DescriptionBox />
-      <RelatedProducts />
     </div>
   );
 }

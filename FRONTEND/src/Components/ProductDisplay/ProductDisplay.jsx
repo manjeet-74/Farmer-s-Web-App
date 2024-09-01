@@ -13,14 +13,35 @@ export default function ProductDisplay(props) {
     <div className="ProductDisplay">
       <div className="ProductDisplay-left">
         <div className="ProductDisplay-img-list">
-          <img src={product.image} alt="" />
-          <img src={product.image} alt="" />
-          <img src={product.image} alt="" />
-          <img src={product.image} alt="" />
+          <img
+            src={product.image}
+            alt=""
+            style={{ height: "120px", width: "120px" }}
+          />
+          <img
+            src={product.image}
+            alt=""
+            style={{ height: "120px", width: "120px" }}
+          />
+          <img
+            src={product.image}
+            alt=""
+            style={{ height: "120px", width: "120px" }}
+          />
+          <img
+            src={product.image}
+            alt=""
+            style={{ height: "120px", width: "120px" }}
+          />
         </div>
 
         <div className="ProductDisplay-img">
-          <img src={product.image} alt="" className="ProductDisplay-main-img" />
+          <img
+            src={product.image}
+            alt=""
+            className="ProductDisplay-main-img"
+            style={{ height: "510px", width: "510px" }}
+          />
         </div>
       </div>
       <div className="ProductDisplay-right">
@@ -36,11 +57,11 @@ export default function ProductDisplay(props) {
 
         <div className="ProductDisplay-right-prices">
           <div className="ProductDisplay-right-price-old">
-            ${product.old_price}
+            &#8377;{product.old_price}
           </div>
 
           <div className="ProductDisplay-right-price-new">
-            ${product.new_price}
+            &#8377;{product.new_price}
           </div>
         </div>
 
@@ -49,15 +70,9 @@ export default function ProductDisplay(props) {
         </div>
 
         <div className="ProductDisplay-right-size">
-          <h1>Select Size</h1>
+          <h1></h1>
 
-          <div className="ProductDisplay-right-sizes">
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div>XXL</div>
-          </div>
+          <div className="ProductDisplay-right-sizes"></div>
         </div>
 
         <button
@@ -69,11 +84,11 @@ export default function ProductDisplay(props) {
         </button>
 
         <p className="ProductDisplay-right-category">
-          <span>Catogory: </span> Women, T-Shirt, Crop Top,
+          <span>Catogory: </span> Vegetables, Fruits, Grains
         </p>
 
         <p className="ProductDisplay-right-category">
-          <span>Tags: </span> Modern, Latest
+          <span>Tags: </span> Fresh, Seasonal
         </p>
       </div>
     </div>

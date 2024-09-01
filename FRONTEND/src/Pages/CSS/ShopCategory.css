@@ -4,6 +4,15 @@
   width: 82%;
 }
 
+.banner {
+  margin: 20px;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #fdd835, #8bc34a, #ff7043);
+  border-radius: 5px;
+}
+
 .Shopcategory-indexSort {
   display: flex;
   margin: 0 170px;

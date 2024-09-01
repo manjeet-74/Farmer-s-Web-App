@@ -3,18 +3,17 @@ import Item from "../Item/Item.jsx";
 import "./NewCollections.css";
 
 export default function NewCollections() {
-
   const [new_collection, setNew_collection] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:4000/newcollections")
       .then((response) => response.json())
       .then((data) => setNew_collection(data));
-  }, [])
+  }, []);
 
   return (
     <div className="NewCollections">
-      <h1>NEW COLLECTIONS</h1>
+      <h1>FRESH COLLECTIONS</h1>
       <hr />
       <div className="Collections">
         {new_collection.map((item, i) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import instagram_icon from "../Assets/instagram_icon.png";
-import footer_logo from "../Assets/logo_big.png";
+import footer_logo from "../Assets/logo.jpg";
 import pintester_icon from "../Assets/pintester_icon.png";
 import whatsapp_icon from "../Assets/whatsapp_icon.png";
 
@@ -10,8 +10,12 @@ export default function Footer() {
   return (
     <div className="Footer">
       <div className="Footer-logo">
-        <img src={footer_logo} alt="" />
-        <p>SHOPPER</p>
+        <img
+          src={footer_logo}
+          alt=""
+          style={{ height: "50px", width: "50px" }}
+        />
+        <p>HarvestHub</p>
       </div>
 
       <ul className="Footer-links">

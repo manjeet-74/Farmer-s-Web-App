@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 800px;
   padding: 30px 50px;
-  margin: 20px 30px;
+  margin: 0 20px;
   border-radius: 6px;
   background: white;
 }
@@ -57,10 +57,10 @@
   font-weight: 500;
 }
 
-@media(max-width: 800px){
-    .addproduct{
-        width: auto;
-        padding: 30px;
-        margin: 20px;
-    }
+@media (max-width: 800px) {
+  .addproduct {
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+  }
 }

@@ -1,13 +1,12 @@
 import React from "react";
-import navlogo from "../../assets/nav-logo.svg";
-import navProfile from "../../assets/nav-profile.svg";
+import logo from "../../assets/logo.jpg";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <img src={navlogo} alt="" className="nav-logo" />
-      <img src={navProfile} className="nav-profile" alt="" />
+    <div className="nav-logo">
+      <img src={logo} alt="" style={{ height: "30px", width: "30px" }} />
+      <p>HarvestHub</p>
     </div>
   );
 };

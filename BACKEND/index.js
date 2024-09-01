@@ -7,6 +7,7 @@ const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
 const { type } = require("os");
+require("dotenv").config();
 
 app.use(express.json());
 app.use(cors());
@@ -14,7 +15,7 @@ app.use(cors());
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/e-commerce");
+  await mongoose.connect(process.env.MONGODB_CLUSTER_URL);
 }
 
 //Image Storage Engine
@@ -215,12 +216,12 @@ app.get("/newcollections", async (req, res) => {
   res.send(newcollection);
 });
 
-//creating end point for popular in women section
-app.get("/popularinwomen", async (req, res) => {
-  let products = await Product.find({ category: "women" });
-  let popular_in_women = products.slice(0, 4);
-  console.log("Popular in women fetched");
-  res.send(popular_in_women);
+//creating end point for popular in vegetables section
+app.get("/popularinvegetables", async (req, res) => {
+  let products = await Product.find({ category: "vegetables" });
+  let popular_in_vegetables = products.slice(0, 4);
+  console.log("Popular in vegetables fetched");
+  res.send(popular_in_vegetables);
 });
 
 //Creating middleware to fetch user

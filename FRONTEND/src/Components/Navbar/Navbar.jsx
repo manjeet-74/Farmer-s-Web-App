@@ -5,7 +5,7 @@ import "./Navbar.css";
 
 import { ShopContext } from "../../Context/ShopContext";
 import cart_icon from "../Assets/cart_icon.png";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/logo.jpg";
 
 export default function Navbar() {
   const [menu, setMenu] = useState("");
@@ -21,11 +21,16 @@ export default function Navbar() {
   return (
     <div className="Navbar">
       <div className="nav-logo">
-        <img src={logo} alt="" />
-        <p>Shopper</p>
+        <img src={logo} alt="" style={{ height: "30px", width: "30px" }} />
+        <p>HarvestHub</p>
       </div>
 
-      <img className="nav-dropdown" onClick={dropdown_toggle} src={nav_dropdown} alt="" />
+      <img
+        className="nav-dropdown"
+        onClick={dropdown_toggle}
+        src={nav_dropdown}
+        alt=""
+      />
       <ul ref={menuRef} className="nav-menu">
         <li
           onClick={() => {
@@ -40,45 +45,53 @@ export default function Navbar() {
 
         <li
           onClick={() => {
-            setMenu("men");
+            setMenu("fruits");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/men">
-            Men
+          <Link style={{ textDecoration: "none" }} to="/fruits">
+            Fruits
           </Link>{" "}
-          {menu === "men" ? <hr /> : <></>}{" "}
+          {menu === "fruits" ? <hr /> : <></>}{" "}
         </li>
 
         <li
           onClick={() => {
-            setMenu("women");
+            setMenu("vegetables");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/women">
-            Women{" "}
+          <Link style={{ textDecoration: "none" }} to="/vegetables">
+            Vegetables{" "}
           </Link>
-          {menu === "women" ? <hr /> : <></>}{" "}
+          {menu === "vegetables" ? <hr /> : <></>}{" "}
         </li>
 
         <li
           onClick={() => {
-            setMenu("kids");
+            setMenu("grains");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/kids">
-            Kids
+          <Link style={{ textDecoration: "none" }} to="/grains">
+            Grains
           </Link>{" "}
-          {menu === "kids" ? <hr /> : <></>}{" "}
+          {menu === "grains" ? <hr /> : <></>}{" "}
         </li>
       </ul>
 
       <div className="nav-login-cart">
-        {localStorage.getItem("auth-token") ? <button onClick={() => {
-          localStorage.removeItem("auth-token"); window.location.replace("/")
-        }}>Logout</button> :
+        {localStorage.getItem("auth-token") ? (
+          <button
+            onClick={() => {
+              localStorage.removeItem("auth-token");
+              window.location.replace("/");
+            }}
+          >
+            Logout
+          </button>
+        ) : (
           <Link style={{ textDecoration: "none" }} to="/login">
             <button>Login</button>
-          </Link>}
+          </Link>
+        )}
         <Link style={{ textDecoration: "none" }} to="/cart">
           <img src={cart_icon} alt="" />
         </Link>

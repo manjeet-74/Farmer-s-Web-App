@@ -7,7 +7,7 @@ const AddProduct = () => {
   const [productDetails, setProductDetails] = useState({
     name: "",
     image: "",
-    category: "women",
+    category: "vegetables",
     new_price: "",
     old_price: "",
   });
@@ -36,7 +36,8 @@ const AddProduct = () => {
         Accept: "application/json",
       },
       body: formData,
-    }).then((resp) => resp.json())
+    })
+      .then((resp) => resp.json())
       .then((data) => {
         responseData = data;
       });
@@ -103,9 +104,9 @@ const AddProduct = () => {
           name="category"
           className="addproduct-selector"
         >
-          <option value="women">Women</option>
-          <option value="men">Men</option>
-          <option value="kid">Kid</option>
+          <option value="vegetables">Vegetables</option>
+          <option value="fruits">Fruits</option>
+          <option value="grains">Grains</option>
         </select>
       </div>
       <div className="addproduct-itemfield">
